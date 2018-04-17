@@ -39,8 +39,8 @@ if (grep -iq -e "TA-Lib" $REQ_TXT) then
   export LD_LIBRARY_PATH=$(pwd)/python/lib:$(pwd)/vendor/lib:$(pwd)/vendor/lib/libta
 
   puts-step "Downloading TA-Lib Python wrapper and its dependencies (numpy & Cython)."
-  pip install numpy
-  pip install Cython
+  /app/.heroku/python/bin/pip install numpy
+  /app/.heroku/python/bin/pip install Cython
   
   easy_install TA-Lib
 
